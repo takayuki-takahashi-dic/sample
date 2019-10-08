@@ -1,0 +1,18 @@
+<h1>問い合わせ一覧</h1>
+<table>
+  <tr>
+    <th>name</th>
+    <th>email</th>
+    <th>content</th>
+  </tr>
+
+<% @contacts.each do |contact| %>
+  <tr>
+    <td><%= contact.name %></td>
+    <td><%= contact.email %></td>
+    <td><%= contact.content %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to '問い合わせ画面にもどる', new_contact_path %>
